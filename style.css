@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #eb0202, #191606); /* Updated page background gradient to yellow */
+  font-family: "Acme";
+}
+
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.untoldcoding {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(#2c991d, #9198e5);
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+}
+
+.untoldcoding:hover {
+  z-index: 1111;
+  transform: perspective(2000px) rotate(-10deg);
+
+  box-shadow: 5px 5px 20px rgb(235, 151, 128);
+}
+
+.untoldcoding .img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #b9ff08;
+  box-sizing: border-box;
+  transform-origin: left;
+  z-index: 1;
+  transition: 2s;
+
+  
+}
+
+.untoldcoding .img-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.untoldcoding:hover .img-container {
+  transform: rotateY(-135deg);
+}
+
+.untoldcoding .untoldcoding-details {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #000;
+}
+
+.untoldcoding .untoldcoding-details h2 {
+  margin: 0;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  font-size: 2em;
+  background: linear-gradient(to right, #f32170, #ff0c08, #710071, #eedd44);
+  -webkit-text-fill-color: transparent;
+ 
+  animation: untold 3s infinite ease-in-out;
+}
+
+@keyframes untold {
+  0% {
+    background: linear-gradient(to right, #f32170, #ff0c08, #710071, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: untold 0.1s infinite ease-in-out;
+  }
+  50% {
+    background: linear-gradient(to right, #2fff00, #1008ff, #ec4705, #a744ee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: untold 3s infinite ease-in-out;
+  }
+  100% {
+    background: linear-gradient(to right, #f32121, #ff0890, #cdb903, #d122f8);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: untold 1s infinite ease-in-out;
+  }
+}
+.untoldcoding .untoldcoding-details p {
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+.audio-player {
+  width: 300px;
+  margin: 40px auto;
+
+}
+
+.happy-birthday {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.happy-birthday span {
+  font-size: 80px;
+  color: #ffd700; /* Yellow color */
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Glow effect */
+}
+
+.happy-birthday span:nth-child(2) {
+  font-size: 100px;
+  color: #f7dc6f; /* Light yellow color */
+  text-shadow: 0 0 10px #f7dc6f, 0 0 20px #f7dc6f, 0 0 30px #f7dc6f; /* Glow effect */
+}
+
+.happy-birthday span:last-child {
+  font-size: 60px;
+  color: #7dcb41;
+  text-shadow: 0 0 10px #c6ec1d, 0 0 20px #fff, 0 0 30px #fff; /* Glow effect */
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.play-pause-button {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #fff;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: -80px; /* Add some margin top to separate from audio element */
+}
+
+.play-pause-button:hover {
+  background-color: #ff99cc;
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+}
+
+.play-pause-button:active {
+  transform: scale(0.9);
+}

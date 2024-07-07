@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITS MY DAY NOT URS | ANASMEMON</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="untoldcoding">
+        <div class="img-container">
+          <img
+            src="Add a subheading.png" aria-setsize="100px"
+            alt=""
+          />
+        </div>
+        <div class="untoldcoding-details">
+          <h2>for you my bff</h2>
+          Happy Birthday to  best friend "ALIYA! Your friendship is a
+          treasure, and I cherish every moment of laughter, support, and
+          adventures we’ve shared. You’re more than just a friend, you’re
+          family. May your birthday be as fantastic and special as you are,
+          filled with joy, love, and endless happy moments.
+
+          <br /><br />
+          ---anasmemon
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- Happy Birthday message on top -->
+<div class="happy-birthday">
+  <span>Happy</span>
+  <span>Birthday</span>
+  <span>My Dear</span>
+</div>
+
+
+<div class="audio-player">
+  <button class="play-pause-button" onclick="playPause()">Play/paush</button>
+  <audio id="bday-audio" src="bday.mp3" type="audio/mp3" autoplay></audio>
+</div>
+
+<script>
+  var audio = document.getElementById("bday-audio");
+  var playPauseButton = document.getElementById("play-pause-button");
+
+  function playPause() {
+    if (audio.paused) {
+      audio.play();
+      playPauseButton.innerHTML = "Pause";
+    } else {
+      audio.pause();
+      playPauseButton.innerHTML = "Play";
+    }
+  }
+</script>
